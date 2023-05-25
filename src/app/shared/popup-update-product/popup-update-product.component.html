@@ -1,0 +1,39 @@
+<div style="width: 500px;">
+    <h1 mat-dialog-title>Update product</h1>
+    <div>
+        <form class="example-form">
+
+
+            <mat-form-field class="example-full-width" style="width: 100%;">
+                <mat-label>Id</mat-label>
+                <input matInput disabled [(ngModel)]="data.id" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-full-width" style="width: 100%;">
+                <mat-label>Name</mat-label>
+                <input matInput [(ngModel)]="data.name" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-full-width" style="width: 100%;">
+                <mat-label>Description</mat-label>
+                <input matInput [(ngModel)]="data.description" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" style="width: 100%;">
+                <mat-label>Price</mat-label>
+                <input matInput [(ngModel)]="data.price" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" style="width: 100%;">
+                <mat-label>Quantity</mat-label>
+                <input matInput [(ngModel)]="data.quantity" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+
+
+        </form>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">No Thanks</button>
+        <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+    </div>
+</div>
